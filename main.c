@@ -36,6 +36,9 @@ void test(Test *test_p, int size) METHOD_BODY(
         }
 )
 int main() METHOD_BODY(
+        /**
+         * 使用 NEW(结构体名称) 创建对象，他的返回值是一个 void* 指针类型，需要自己强转成需要的类型
+         */
         Test *test_p = (Test *) NEW(Test);
         // 第一次gc
         test(test_p, 1023);
